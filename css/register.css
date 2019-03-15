@@ -183,6 +183,7 @@ input{
 	font-size: 14px;
 	line-height: 50px;
 	color:#666;
+	transition:all .5s;
 }
 .y_regist_tips{
 	opacity: 0;
