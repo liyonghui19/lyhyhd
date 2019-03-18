@@ -40,6 +40,9 @@ div{
 	line-height: 0;
 }
 /*header*/
+#userSpan{
+	display: inline-block;
+}
 .hd_header_wrap{
 	width:100%;
 	background-color: #fff;

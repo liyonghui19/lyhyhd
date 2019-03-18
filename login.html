@@ -49,11 +49,11 @@
 						<div class="form_item_wrap">
 							<div class="form_item">
 								<label class="user_ico">&nbsp;</label>
-								<input id="un" type="text" name="credentials.username" spellcheck="false" tabindex="1" class="ipt ipt_username gay_text" style="outline: none;" value="">
+								<input id="username" type="text" name="credentials.username" spellcheck="false" tabindex="0" class="ipt ipt_username gay_text" style="outline: none;" value="">
 							</div>
 							<div class="form_item">
 								<label class="paswd_ico">&nbsp;</label>
-								<input id="pwd" type="password" oncopy="return false" onpaste="return false" oncut="return false" oncontextmenu="return false" name="credentials.password" tabindex="2" class="ipt ipt_password gay_text" placeholder="密码 " style="outline: none;">
+								<input id="userpass" type="password" oncopy="return false" onpaste="return false" oncut="return false" oncontextmenu="return false" name="credentials.password" tabindex="2" class="ipt ipt_password gay_text" placeholder="密码 " style="outline: none;">
 							</div>
 							<div class="auto_login clearfix">
 								<p class="clearfix">
@@ -66,7 +66,7 @@
 								</p>
 								<a href="javascript:;" class="forget_pswd">忘记密码</a>
 							</div>
-							<button class="login_btn" type="button" onclick="javascript">登录</button>
+							<a class="login_btn" type="button" id="btnLogin">登录</a>
 						</div>
 						<div class="joint_landing_wrap">
 							<p>更多合作网站账号登录</p>
@@ -157,5 +157,6 @@
 	</div>	
 </body>
 </html>
+<script type="text/javascript" src="js/cookieTools.js"></script>
 <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
 <script type="text/javascript" src="js/login.js"></script>

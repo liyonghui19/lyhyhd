@@ -102,6 +102,8 @@ function countTime() {
     //递归每秒调用countTime方法，显示动态时间效果 setTimeout(countTime,1000);
 } 
 
+
+
 window.onload=function(){
 	autoPlay();
 	// 2.鼠标进入暂停
@@ -124,6 +126,15 @@ window.onload=function(){
 
 	// 调用倒计时	
 	setInterval(countTime,1000);
+
+
+	let username = getCookie("usernames");
+	if(username!=""){
+		my$("#userSpan").innerHTML = username;
+	}else{
+		// $("#loginBox").style.display = "block";
+	}
+	
 }
 
 
@@ -186,3 +197,4 @@ $(function(){
 				$('#jump_top').css({"display":"block"});
 			}
         }
+

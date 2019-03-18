@@ -69,7 +69,7 @@ input{
 }
 .regist_header_right .help_wrap .hd_menu{
 	padding-right: 18px;
-	background: url(../img/regist.png) no-repeat right -30px;
+	background: url(../img/regist.png) no-repeat right -27px;
 	color:#333;
 }
 .regist_header_right .help_wrap .hd_menu .hello_ico{
@@ -82,18 +82,29 @@ input{
 }
 .regist_header_right .help_wrap .hd_menu_list{
 	position: absolute;
-	/*z-index: -1;*/
+	z-index: -1;
 	top:0px;
 	right:0px;
 	width:98px;
 	padding-top: 21px;
+	text-align: center;
 	border: 1px solid #ccc;
+	display: none;
+}
+.regist_header_right .help_wrap:hover .hd_menu_list{
+	display: block;
+}
+.regist_header_right .help_wrap a:hover{
+	color:#e60012;
 }
 .fr{
 	float:right;
 }
 .blue_link{
 	color:#06c;
+}
+.blue_link:hover{
+	color:#f60;
 }
 /*content*/
 .login_wrap{
@@ -121,6 +132,7 @@ input{
 	line-height: 30px;
 	color:#999;
 	background:#fff7d1 url(../img/login.png) no-repeat -324px -150px;
+	display: none;
 }
 .mod_login_wrap h3{
 	float:left;
@@ -154,6 +166,9 @@ a.blue_link{
 	background-color: #fff;
 	line-height: 24px;
 }
+.mod_login_wrap .form_item_wrap .form_item:first-child{
+	border:1px solid #aaa;
+}
 .mod_login_wrap .form_item_wrap .form_item label{
 	display: inline-block;
 	width:42px;
@@ -174,7 +189,7 @@ a.blue_link{
 	outline:none;
 }
 .mod_login_wrap .form_item_wrap .form_item .gay_text{
-	color:#ccc;
+	/*color:#ccc;*/
 }
 .mod_login_wrap .form_item_wrap .form_item .paswd_ico{
 	background: url(../img/login.png) no-repeat -150px 4px;
@@ -191,10 +206,17 @@ a.blue_link{
 	color:#999;
 	background:url(../img/login.png) no-repeat -347px -265px;
 }
+.mod_login_wrap .form_item_wrap .check_agreement {
+    float: left;
+    padding-left: 18px;
+    color: #999;
+    background: url(../img/login.png) no-repeat -347px -325px;
+}
 .mod_login_wrap .form_item_wrap .auto_tips{
 	float:left;
 	margin-left: 7px;
 	color:red;
+	display: none;
 }
 .mod_login_wrap .form_item_wrap .service_agreement{
 	/*display: none;*/
@@ -217,6 +239,8 @@ a.blue_link{
 	cursor:pointer;
 	text-shadow: 1px 1px 1px #ff7373;
 	line-height: 52px;
+	display: block;
+	text-align: center;
 }
 .joint_landing_wrap{
 	position: relative;
@@ -277,6 +301,7 @@ a.blue_link{
 }
 .mod_login_wrap .more_landing{
 	margin-top: 15px;
+	display: none;
 }
 .mod_login_wrap .more_landing li{
 	float:left;
