@@ -189,7 +189,7 @@ a.blue_link{
 	outline:none;
 }
 .mod_login_wrap .form_item_wrap .form_item .gay_text{
-	/*color:#ccc;*/
+	color:#ccc;
 }
 .mod_login_wrap .form_item_wrap .form_item .paswd_ico{
 	background: url(../img/login.png) no-repeat -150px 4px;

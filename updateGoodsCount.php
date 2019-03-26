@@ -1,21 +1,21 @@
 <?php
 	header("Content-Type:text/html;charset=utf-8");
 	//1、接受客户端的数据（用户输入的数据）
-	$vipName   = $_REQUEST['vipName'];
-	$goodsId   = $_REQUEST['goodsId'];
-	$goodsCount = $_REQUEST['goodsCount'];
+	$vipName   = $_GET['vipName'];
+	$goodsId   = $_GET['goodsId'];
+	$goodsCount = $_GET['goodsCount'];
 	
 	//2、数据保存在数据库中
 	//1）、建立连接（搭桥）
-	$conn = mysql_connect("localhost","root","qianfeng");
+	$conn = mysql_connect("localhost","root","root");
 	
 	//2）、选择数据库（找目的地）
-	if(!mysql_select_db("shoppingcenter",$conn)){
+	if(!mysql_select_db("yhdhy",$conn)){
 		die("数据库选择失败".mysql_error());
 	}
 	
 	//3）、传输数据（过桥）
-	$sqlstr = "update shoppingCart set goodsCount='".$goodsCount."' where vipName='".$vipName."' and goodsId='".$goodsId."'";
+	$sqlstr = "update shoppingcart set goodsCount='".$goodsCount."' where vipName='".$vipName."' and goodsId='".$goodsId."'";
 	//echo($sqlstr);
 	
 	if(!mysql_query($sqlstr,$conn)){

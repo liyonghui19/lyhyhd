@@ -24,18 +24,18 @@
 	
 	//2、数据保存在数据库中
 	//1）、建立连接（搭桥）
-	$conn = mysql_connect("localhost","root","qianfeng");
+	$conn = mysql_connect("localhost","root","root");
 	if(!$conn){
 		die("数据库连接失败：".mysql_error());
 	}
 	
 	//2）、选择数据库（找目的地）
-	if(!mysql_select_db("shoppingcenter",$conn)){
+	if(!mysql_select_db("yhdhy",$conn)){
 		die("数据库选择失败".mysql_error());
 	};
 	
 	//3）、传输数据（过桥）
-	$sqlstr = "insert into goodsInfo values('".$goodsId."','".$goodsName."','".$goodsType."'
+	$sqlstr = "insert into goodsinfo values('".$goodsId."','".$goodsName."','".$goodsType."'
 	,'".$goodsPrice."','".$goodsCount."','".$goodsDesc."','".$goodsImg."'
 	,'".$beiyong1."','".$beiyong2."','".$beiyong3."','".$beiyong4."'
 	,'".$beiyong5."','".$beiyong6."','".$beiyong7."','".$beiyong8."'

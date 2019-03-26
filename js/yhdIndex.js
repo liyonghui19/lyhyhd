@@ -79,7 +79,7 @@ function countTime() {
     var date = new Date();  
     var now = date.getTime();  
     //设置截止时间  
-    var str="2019/3/20 00:00:00";
+    var str="2019/3/25 00:00:00";
     var endDate = new Date(str); 
     var end = endDate.getTime();  
     

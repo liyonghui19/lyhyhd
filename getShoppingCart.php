@@ -1,18 +1,18 @@
 <?php
 	header("Content-Type:text/html;charset=utf-8");
-	$vipName   = $_REQUEST['vipName'];
+	$vipName  = $_GET['vipName'];
 	
 	//2、数据保存在数据库中
 	//1）、建立连接（搭桥）
-	$conn = mysql_connect("localhost","root","qianfeng");
+	$conn = mysql_connect("localhost","root","root");
 	
 	//2）、选择数据库（找目的地）
-	if(!mysql_select_db("shoppingcenter",$conn)){
+	if(!mysql_select_db("yhdhy",$conn)){
 		die("数据库选择失败".mysql_error());
 	};
 	
 	//3）、传输数据（过桥）
-	$sqlstr = "select * from goodsInfo g,shoppingCart s
+	$sqlstr = "select * from goodsinfo g,shoppingcart s
 			   where g.goodsId = s.goodsId  and s.vipName = '".$vipName."'";
 	
 	$result = mysql_query($sqlstr,$conn);//执行查询的sql语句后，有返回值，返回的是查询结果

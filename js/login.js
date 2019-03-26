@@ -2,6 +2,7 @@
 // 窗口打开自动聚焦
 $(document).ready(function(){
 	$("#username").focus();	
+	$("#username").val("");
 })
 
 $(function(){
@@ -24,6 +25,23 @@ $(function(){
 	$("#username").mouseenter(function(){
 		$(this).focus();
 	})
+	 $("#username").focus(function(){
+        if($(this).val()==this.defaultValue){
+            $(this).val("");
+        }
+    });
+	 $("#username").mouseenter(function(){
+	 	if($(this).val()==""){
+	 		$(this).removeClass("gay_text");
+	 	}
+	 })
+
+    $("#username").mouseleave(function(){
+        if($(this).val()==""){
+            $(this).val(this.defaultValue);
+            $(this).addClass("gay_text");
+        }
+    });
 	
 })
 //=======================发送php请求====================================
